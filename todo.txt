@@ -1,0 +1,30 @@
+import { useEffect, useState } from 'react'
+// import './css/todo.css'
+
+const Todu = () => {
+
+    let listNum = 0;
+
+    const inputRef = useRef(null)
+    const [Todos,setTodos] = useState([])
+    const onClick =()=>{
+        setTodos([...Todos,{no:listNum++,work:inputRef.current.value,display:''}])
+        inputRef.current.value = '';
+    }
+    useEffect(()=>{
+      console.log(Todos)
+    },[Todos])
+
+  return (
+    <div className='todo'>
+        <div className='todo-header'>To-Do List</div>
+        <div className='todo-add'>
+            <input type="text" ref={inputRef} placeholder='Write your wark' className='todo-input' />
+            <div onClick={()=>{onClick}} className="todo-add-btn">Add</div>
+        </div>
+        
+    </div>
+  )
+}
+
+export default Todu

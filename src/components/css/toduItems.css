@@ -1,0 +1,28 @@
+.todoItems{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0px;
+    align-items: center;
+}
+.todoItems-container{
+ display: flex;   
+}
+.todoItems-text{
+    padding-left: 16px ;
+    color: #404040;
+    font-size: 22px;
+}
+.crossIcon{
+    cursor: pointer;
+    padding-right: 25px;
+}
+.todoItems,.todoItems,.todoItems-container,.todoItems-text,.crossIcon{
+    background: rgb(255, 255, 255);
+}
+img{
+    background-color: transparent;
+}
+.inline-through > img{
+    background-color: transparent;
+    text-decoration: line-through solid red 2px;
+}
